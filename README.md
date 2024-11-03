@@ -20,6 +20,8 @@ This platform is your gateway to leveraging technology for smarter farming, bett
 \
 Technologies used:
 - Nginx
+- Weather API
+- Google Maps API
 - HTML
 - CSS
 - JavaScript
