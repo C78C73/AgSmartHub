@@ -1,0 +1,12 @@
+/* weather.css */
+#weather-section h2::before {
+    content: '\f185';
+    color: var(--accent-yellow);
+}
+
+#weather-output {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+}

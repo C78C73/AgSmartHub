@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Agriculture App</h1>
+    </header>
+
+    <div class="tab-container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="weather-section">
+                <i class="fas fa-sun"></i> Weather
+            </button>
+            <button class="tab-button" data-tab="map-section">
+                <i class="fas fa-map-marker-alt"></i> Field Map
+            </button>
+            <button class="tab-button" data-tab="livestock-section">
+                <i class="fas fa-cow"></i> Livestock
+            </button>
+        </div>
+    
+        <div class="tab-content active" id="weather-section">
+            <h2>Weather Forecast</h2>
+            <div class="input-group">
+                <input type="text" id="location-input" placeholder="Enter location (e.g., London, UK)">
+                <button id="get-weather">Get Weather</button>
+            </div>
+            <div id="weather-output"></div>
+        </div>
+    
+        <div class="tab-content" id="map-section">
+            <h2>Field Map</h2>
+            <div class="input-group">
+                <input type="text" id="map-location-input" placeholder="Enter location (e.g., Paris, France)">
+                <button id="load-map">Load Map</button>
+            </div>
+            <div id="map"></div>
+        </div>
+    
+        <div class="tab-content" id="livestock-section">
+            <h2>Livestock Manager</h2>
+            <form id="livestock-form">
+                <input type="text" placeholder="Livestock Name" id="livestock-name" required>
+                <input type="text" placeholder="Type" id="livestock-type" required>
+                <input type="number" placeholder="Age" id="livestock-age" required>
+                <button type="submit">Add Livestock</button>
+            </form>
+            <div id="livestock-list"></div>
+        </div>
+    </div>    
+
+    <!-- Scripts -->
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13.6/auth0-spa-js.production.js"></script>
+    <script src="/scripts/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8Due4sAFzZ4zKtdytRz0Y5EuNI_0u5K8&callback=initMap"></script>
+    <script src="/scripts/weather.js" type="module"></script>
+    <script src="/scripts/livestock.js" type="module"></script>
+    <script src="/scripts/app.js" type="module"></script>
+</body>
+</html>

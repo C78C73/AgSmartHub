@@ -1,0 +1,11 @@
+/* map.css */
+#map {
+    height: 400px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+#map-section h2::before {
+    content: '\f3c5';
+    color: var(--accent-orange);
+}
